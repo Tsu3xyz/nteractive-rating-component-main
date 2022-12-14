@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main__wrapper">
+      <div class="container__main container">
+        <div class="container__main--star">
+          <img src="./images/icon-star.svg" alt="icon star" />
+        </div>
+        <div class="container__main--text">
+          <h1 class="container__main--text-h1">How did we do?</h1>
+          <p class="container__main--text-p">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+        </div>
+        <div class="container__main--rating">
+          <div class="container__main--rating-number" data-number="1">1</div>
+          <div class="container__main--rating-number" data-number="2">2</div>
+          <div class="container__main--rating-number" data-number="3">3</div>
+          <div class="container__main--rating-number" data-number="4">4</div>
+          <div class="container__main--rating-number" data-number="5">5</div>
+        </div>
+        <a href="#" class="container__main--button">Submit</a>
+      </div>
+      <div class="container__selected container">
+        <div class="container__selected--image">
+          <img
+            src="./images/illustration-thank-you.svg"
+            alt="thank you icon"
+            class="img"
+          />
+        </div>
+        <div class="container__selected--select">
+          <p>You selected <span class="score">0</span> out of 5</p>
+        </div>
+        <div class="container__selected--text">
+          <h2>Thank you!</h2>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

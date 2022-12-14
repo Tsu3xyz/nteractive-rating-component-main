@@ -1,0 +1,262 @@
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-grey: #959eac;
+  --color-medium-grey: #7c8798;
+  --color-dark-grey: #252d37;
+  --color-very-dark-grey: #121417;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-very-dark-grey);
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  border-radius: 3rem;
+  width: 41.2rem;
+  height: 41.6rem;
+}
+
+.main__wrapper {
+  position: relative;
+  width: 41.2rem;
+  height: 41.6rem;
+}
+
+.container__main {
+  padding: 3.2rem;
+}
+
+.container__main--star {
+  width: 4.8rem;
+  height: 4.8rem;
+  background: var(--color-dark-grey);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.container__main--text-h1 {
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.container__main--text-p {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  color: var(--color-light-grey);
+  margin-bottom: 2.4rem;
+}
+
+.container__main--rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 3.2rem;
+  cursor: pointer;
+}
+
+.container__main--rating-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-dark-grey);
+  width: 5.1rem;
+  height: 5.1rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--color-medium-grey);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.container__main--rating-number:hover {
+  color: white;
+  background: var(--color-medium-grey);
+}
+
+.container__main--rating-number:active {
+  color: white;
+  background: #fc7614;
+}
+
+.container__main--button {
+  background: #fc7614;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  padding: 1.1rem 0 1.5rem 0;
+  text-align: center;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.container__main--button:hover {
+  background: white;
+  color: #fc7614;
+}
+
+.container__selected {
+  padding: 4.5rem 3.2rem;
+
+  text-align: center;
+  display: none;
+}
+
+.container__selected--image {
+  margin-bottom: 3.2rem;
+}
+
+.container__selected--select {
+  background: var(--color-dark-grey);
+  display: inline-block;
+  padding: 0.4rem 2rem;
+  border-radius: 100px;
+  color: #fc7614;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.container__selected--text h2 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.container__selected--text p {
+  color: var(--color-light-grey);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+
+.container__selected.active {
+  display: block;
+}
+
+@media (max-width: 447px) {
+  .main__wrapper {
+    width: 32.7rem;
+    height: 36rem;
+  }
+  .container {
+    border-radius: 1.5rem;
+    width: 32.7rem;
+    height: 36rem;
+  }
+
+  .container__main {
+    padding: 2.4rem 2.4rem 3.2rem 2.4rem;
+  }
+
+  .container__main--star {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .container__main--star img {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .container__main--text-h1 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    margin-bottom: 1.7rem;
+  }
+
+  .container__main--text-p {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+
+  .container__main--rating {
+    margin-bottom: 2.4rem;
+  }
+
+  .container__main--rating-number {
+    width: 4.2rem;
+    height: 4.2rem;
+    font-size: 1.4rem;
+  }
+
+  .container__main--button {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    letter-spacing: 1.9px;
+    padding: 1.2rem 0 1.5rem 0;
+  }
+
+  .container__selected {
+    padding: 3.4rem 2.4rem 3.7rem 2.4rem;
+  }
+
+  .container__selected--image {
+    margin-bottom: 2.4rem;
+  }
+
+  .container__selected--image img {
+    width: 14.4rem;
+    height: 9.6rem;
+  }
+
+  .container__selected--select {
+    padding: 0.5rem 1.2rem;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .container__selected--text h2 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    margin-bottom: 1.7rem;
+  }
+
+  .container__selected--text p {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+}
